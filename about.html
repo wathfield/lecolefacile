@@ -4,28 +4,70 @@
     <title>l'ecole facile online</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css" >
-    <title>Document</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!--===FONTS===-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <!--===SCRIPTS===-->
+    <script src="SRC/script.js"></script>
+    
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo_image">
-                <img src="img/logo_weiß.jpg" alt="logo" href="/home.html">
-            </div>
+    <header class="headerA">
+        <div class="container_1">
+            <a class="logo_image" href="/home.html" target="_self">
+                <img class="picture" src="img/logo_bunt.png" alt="logo">
+            </a>
+              <nav class="navbar">
+
+                  <div class="nav-span">
+                      <span class="nav-span__item"></span>
+                      <span class="nav-span__item"></span>
+                      <span class="nav-span__item"></span>
+                  </div>
+                  
                 <ul class="nav-list">
                     <li class="nav-list-item"><a class="nav-link" href="/shop.html">Shop</a></li>
-                    <li class="nav-list-item"><a class="nav-link" href="two">Categories</a></li>
-                    <li class="nav-list-item"><a class="nav-link" href="/collections.html">Collections</a></li>
+                    <li class="nav-list-item">
+                        <div class="dropdown">
+                    <button class="dropbtnA" type="button" href="two" onclick="myFunction1(this)">Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown1">
+                        <a href="#">Tops</a>
+                        <a href="#">Bottoms</a>
+                        <a href="#">Accessoires</a>
+                      </div>
+                    </div>
+                    </li>
+                    <li class="nav-list-item">
+                        <div class="dropdown">
+                    <button class="dropbtnB" type="button2" href="/collections.html" onclick="myFunction2(this)">Collections
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown2">
+                        <a href="#">NEW</a>
+                        <a href="#">UNITE</a>
+                        <a href="#">FOMME HEMME</a>
+                    </div>
+                    </div>
+                    </li>
+
                     <li class="nav-list-item"><a class="active" href="/about.html">About</a></li>
                     </a>
                 </ul>
             </nav>
+        </div>
     </header>
-    <main id="swup" class="transition-fade">
+    <main>
         <section class="hero">
-            <h2 class="section-title">No Sugar. No Oil. All Real Fashion.</h2>
+            <h2 class="section-title">No this. No that. All Real Fashion.</h2>
         </section>
+        <!---
         <section class="intro">
             <h2 class="section">We have the best fucking 
                 <span class="text-primary">clothes</span> on earth 
@@ -36,8 +78,8 @@
         <section class="about-us">
             <header class="about-us__intro">
                 <h2 class="section-title-small">
-                    <small>We believe in not only a delicious foods nurtritions. 
-                        We do it with love and entertainment</small>
+                    <small>We believe in not only a delicious style. 
+                        We do it with love and passion u know</small>
                 </h2>
             </header>
             <div class="about-us__body">
@@ -45,13 +87,13 @@
                 <p></p>
             </div>
         </section>
-
+    -->
         <section class="order-online">
             <header>
                 <h2 class="section-title text-primary">ORDER ONLINE</h2>
             </header>
-            <p>Because our clothes get home-packed in germany. This means
-                we are unable to sell outside the country. Therefore, in order to purchase online
+            <p>Our clothes get home-packed in germany. This means
+                we are unable to sell outside the country. In order to purchase online
                 you need to choose one of the options below.
             </p>
             <div class="btn-group">
@@ -61,59 +103,73 @@
             </div>
         </section>
 
+        <header>
+            <h2 class="section-title-products">Some of our products</h2>
+        </header>
+
+    <!--=== PRODUCTS ===-->
+
         <section class="product-showcase">
-            <header>
-                <h2 class="section-title text primary">Some of our products</h2>
-            </header>
-            <div class="products">
-                <div class="product">
+            <div class="product-card">
+                <div class="product-image">
                     <img src="img/Hoodie_black.jpeg" alt="" class="product__img">
-                    <div class="product__content">
-                    <h3 class="product__title">HOODIE</h3>
-
-                    <p>For a remarkable About page, all you need to do is figure out 
-                        your company's unique identity, and then share it with the world. 
-                        Easy, right? Of course not.
-                    </p>
-                        <p class="fineprint">Certified Organic</p>
-                    </div>
                 </div>
-                <div class="product">
-                    <div class="product__content">
-                    <h3 class="product__title">SCARF</h3>
+                    <div class="product__info">
+                    <h3 class="product__title">TRIBAL HOODIE</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">black/purple</p>
+                    </div>
+            </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/Hoodie_purple.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">TRIBAL HOODIE PURPLE</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">white print/purple</p>
+                    </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
                     <img src="img/Scarf.jpeg" alt="" class="product__img">
-                    <p>Your "About Us" page is one of the most
-                        important pages on your website, and it needs to be well crafted. 
-                        This profile also happens to be one of the most commonly overlooked pages, 
-                        which is why you should make it stand out.
-                    </p>
-                        <p class="fineprint">Certified Organic</p>
-                    </div>
                 </div>
-                <div class="product">
-                    <div class="product__content">
-                    <h3 class="product__title">MORE</h3>
-                    <img src="img/Lighter.jpeg" alt="" class="product__img">
-                    <p>The good news? It can be done. In fact, there are some 
-                        companies out there with remarkable "About Us" pages, the 
-                        elements of which you can emulate on your own website.
-                    </p>
-                        <p class="fineprint">Certified Organic</p>
+                    <div class="product__info">
+                    <h3 class="product__title">Logo Scarf</h3>
+                    <h6 class="price">25,00€</h6>
+                        <p class="fineprint">black and white</p>
                     </div>
-                </div>
             </div>
 
-            <div class="btn-group">
-                <div class="btn btn-accent">see all our products</div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/Lighter.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">Lighter bundle</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">3 pieces</p>
+                    </div>
             </div>
-                <p class="mb-0">or order through one of the following</p>
-            <div class="btn-group">
-                <a href="" class="btn btn-primary">Email</a>
-                <a href="" class="btn btn-primary">Facebook</a>
-                <a href="" class="btn btn-primary">Instagram</a>
+
             </div>
         </section>
 
+        <a class="btn-group" href="/index.html">
+            <div class="btn btn-accent">see all our products</div>
+        </a>
+            <p class="mb-0">or order through one of the following</p>
+        <div class="btn-group">
+            <a href="" class="btn btn-primary">Email</a>
+            <a href="" class="btn btn-primary">Facebook</a>
+            <a href="" class="btn btn-primary">Instagram</a>
+        </div>
+
+    <!--=== FOOTER ===-->
         <footer>
             <ul class="footer-nav">
                 <li>
@@ -127,19 +183,91 @@
                    <a href="#">Privacy Policy</a>
                </li>
                </ul>
-
+<!---
                <ul class="footer-social">
                    <li><a href=""></a></li>
                    <li><a href=""></a></li>
                    <li><a href=""></a></li>
                    <li><a href=""></a></li>
                </ul>
+            -->
+
             </ul>
             <p class="copyright">copyright 2019 L'ECOLE FACILE</p>
         </footer>
-
-
-
     </main>
+    <!--- SCRIPT: changes the style of the navigation bar from sticky-top to sticky-left. */ -->
+    <script>
+        window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+/*
+        window.addEventListener('scrolllll', function() {
+            let header = document.querySelector('headerrrr');
+            if(window.pageYOffset > 0;){
+                menuArea.classList.add("cus-menuuu");
+            }else {
+                menuArea.classList.remove("cus-navvv");
+            }
+        })
+        */
+    </script>
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+    <!--SCRIPT: Dropdown Menu inside the Navigation Bar-->
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1(button) {
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(button) {
+          if (!e.target.matches('.dropbtnA')) {
+          var myDropdown1 = document.getElementById("myDropdown1");
+            if (myDropdown1.classList.contains('show')) {
+              myDropdown1.classList.remove('show');
+            }
+          }
+        }
+        </script>
+
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+
+    function myFunction2(button2) {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+
+      window.onclick = function(button2) {
+      if (!e.target.matches('.dropbtnB')) {
+      var myDropdown2 = document.getElementById("myDropdown2");
+        if (myDropdown2.classList.contains('show')) {
+          myDropdown2.classList.remove('show');
+        }
+      }
+    }
+    </script>
+
 </body>
 </html>

@@ -139,9 +139,13 @@ p {
     display: block;
 }
 
+.section-title-products {
+    padding: 2rem 2rem 2rem 2rem;
+}
 
 .text-primary {
     color: var(--clr-primary);
+    padding-bottom: 0.7rem;
 }
 
 
@@ -200,12 +204,21 @@ p {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.active,
 .nav-link {
     float: left;
     display: inline-block;
     padding: 0rem;
     color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: inherit;
+    transition: .5s;
+}
+
+.active {
+    float: left;
+    display: inline-block;
+    padding: 0rem;
+    color: var(--clr-accent);
     text-decoration: none;
     text-transform: inherit;
     transition: .5s;
@@ -219,7 +232,10 @@ p {
     outline: none;
     color: var(--clr-logo);
   }
-
+.active:active {
+    color: var(--clr-logo);
+    text-decoration: none;
+}
 .dropbtnA:hover,
 .dropbtnA:focus,
 .dropbtnB:hover,
@@ -230,7 +246,7 @@ p {
 .active:focus,
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--clr-logo);
+    color: var(--clr-primary);
     text-decoration: none;
 }
 
@@ -281,8 +297,9 @@ p {
     border-radius: 0px 0px 10px 0px;
     transition: 0.3s ease-in-out;
     /* transform: translateY(-13rem); */
-    box-shadow: rgba(0, 0, 0, 2.85);
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
 }
+
 container_1_opened {
     transform: translateY(0%);
 }
@@ -421,13 +438,13 @@ scrolling-active .nav-span__item {
 .btn-group {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    text-decoration: none;
+}
 
 /* ======================
 justify-content: center; 
 =========================*/
-
-    flex-direction: column;
-}
 
 .btn {
     padding: 1em 0.1em .5em;
@@ -436,7 +453,7 @@ justify-content: center;
     display: block;
     margin: 0.5em 0;
     border-radius: 25px;
-    border: 2px solid #F285D5;
+    border: 2px dotted #F285D5;
 }
 
 /*
@@ -467,8 +484,8 @@ Homepage styles
 ================*/
 
 .hero {
-    background-image: url("img/Scarf.jpeg");
-    background-color: black;
+
+    background-image: url("/img/Scarf.jpeg");
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-size: cover;
@@ -498,35 +515,67 @@ Homepage styles
 }
 
 .order-online {
-    background: #cecece;
-}
-
-.products {
-    display: flex;
-    flex-direction: column;
-}
-
-.product {
     background: white;
-    border-radius: 0.95em;
-    border: 2px solid #F285D5;
-    overflow:hidden;
-    box-shadow: 0 0 1em rgba (0, 0, 0, 0, 0.1);
+    padding: 2rem 2.5rem 2rem 2.5rem;
 }
 
-.product__img {
-    display: block;
-    width: 100%;
+.section-title-products {
+    padding: 0;
 }
 
-.product__content {
-    padding: 2.5em;
+.product-showcase {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.product-card {
+    padding:0 3.5%;
+    flex-grow: 1;
+    flex-basis: 33%;
+
+    /* display: flex; /* so child elements can use flexbox stuff too */
+}
+
+.product-card {
+    flex: 1 33%;
+}
+
+.product-card {
+    border-radius: 25px;
+    border: 2px dotted #F285D5;
+}
+@media (max-width: 920px) {
+    .product-card {
+        flex: 1 21%;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        flex: 1 46%;
+    }
+}
+.product-image img{
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.product__info {
+    margin-top: auto;
+}
 .product__title {
     color: #312F34;
-    font-size: 1.5rem;
-    margin-bottom: 0.5em;
+    font-size: 1rem;
+}
+
+.product__info {
+    padding-bottom: 1rem;
+}
+
+/* select the first two */
+.product-showcase .product-card:first-child, 
+.product-showcase .product-card:nth-child(2) {
+  flex: 2 46%;
 }
 
 .fineprint {
@@ -537,6 +586,19 @@ Homepage styles
 /*========================================
     Home-styling for moving image (main) 
 ==========================================*/
+
+#v00 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    
+}
+
+/*========================================
+    Home-styling for moving image (main) 
+==========================================
 
 .container_render {
     position: relative;
@@ -554,37 +616,31 @@ Homepage styles
       background-image: url('https://drive.google.com/uc?id=1ynjD7uLmNXQk1bL6oLoco-OMI9YchHti');
     }
   }
+*/
 
 /*===========================
 §   §      Footer      §    §
 ===========================*/
-
 footer {
-    background: #333;
-    padding: 6em 1em;
-    color: white;
-
-    display: flex;
-}
-
-footer a { 
-    color: inherit;
-    list-style: none;
-    text-decoration: none;
+    background: white;
 }
 
 .footer-nav {
     list-style: none;
+    padding: 1.2rem 1rem 0rem 1rem;
 }
 
 .footer-nav a {
-    padding: 0.75em;
+    color: var(--clr-primary);
     text-decoration: none;
     list-style: none;
 }
 
 footer p {
+    color: var(--clr-primary);
+    padding-bottom: 1rem;
     font-size: inherit;
+    text-align: center;
 }
 
 .footer-nav a:hover {

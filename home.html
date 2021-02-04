@@ -40,9 +40,9 @@
 <body>
     <header class="headerA">
         <div class="container_1">
-            <div class="logo_image">
-                <img class="picture" src="img/logo_bunt.png" alt="logo" href="/home.html">
-            </div>
+            <a class="logo_image" href="/home.html">
+                <img class="picture" src="img/logo_bunt.png" alt="logo">
+            </a>
               <nav class="navbar">
                 <ul class="nav-list">
                     <li class="nav-list-item"><a class="nav-link" href="/index.html">Shop</a></li>
@@ -81,39 +81,48 @@
 
 
     <main>
+        <div id="set-height00"></div>
+
+        <video id="v00" tabindex="0" autobuffer preload>
+            <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'' src="video/l'ecole_facile_render_clip.mp4"></source>
+        </video>
+
+        <script src="image-scroll.js"></script>
+
+<!---
         <div class='container_render'>
             <div class='image-container-render'></div>
           </div>
-
-        <footer>
-            <ul class="footer-nav">
-                <li>
-                   <a href="#">Home</a>
-                   <a href="#">Contact</a>
-                   <a href="#">About us</a>
-                   <a href="#">Visit us</a>
-                   <a href="#">Delivery</a>
-                   <a href="#">Returns</a>
-                   <a href="#">Terms & Conditions</a>
-                   <a href="#">Privacy Policy</a>
-               </li>
-               </ul>
-<!----
-               <ul class="footer-social">
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-                   <li><a href=""></a></li>
-               </ul>
-            </ul>
+          !--===SCRIPTS===--
+    <script src="/script-images.js"></script>
         -->
-            <p class="copyright">copyright 2019 L'ECOLE FACILE</p>
-        </footer>
     </main>
 
-    <!--===SCRIPTS===-->
-    <script src="script.js"></script>
-
+    <footer>
+        <ul class="footer-nav">
+            <li>
+               <a href="#">Home</a>
+               <a href="#">Contact</a>
+               <a href="#">About us</a>
+               <a href="#">Visit us</a>
+               <a href="#">Delivery</a>
+               <a href="#">Returns</a>
+               <a href="#">Terms & Conditions</a>
+               <a href="#">Privacy Policy</a>
+           </li>
+           </ul>
+<!----
+           <ul class="footer-social">
+               <li><a href=""></a></li>
+               <li><a href=""></a></li>
+               <li><a href=""></a></li>
+               <li><a href=""></a></li>
+           </ul>
+        </ul>
+    -->
+        <p class="copyright">copyright 2019 L'ECOLE FACILE</p>
+    </footer>
+    
     <!--- SCRIPT: changes the style of the navigation bar from sticky-top to sticky-left. */ -->
     <script>
         window.addEventListener('scroll', function() {

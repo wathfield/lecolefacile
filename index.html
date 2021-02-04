@@ -14,15 +14,14 @@
     
     <!--===SCRIPTS===-->
     <script src="SRC/script.js"></script>
-
-    <title>Document</title>
+    
 </head>
 <body>
     <header class="headerA">
         <div class="container_1">
-            <div class="logo_image">
-                <img class="picture" src="img/logo_bunt.png" alt="logo" href="/home.html">
-            </div>
+            <a class="logo_image" href="/home.html" target="_self">
+                <img class="picture" src="img/logo_bunt.png" alt="logo">
+            </a>
               <nav class="navbar">
 
                   <div class="nav-span">
@@ -68,6 +67,7 @@
         <section class="hero">
             <h2 class="section-title">No this. No that. All Real Fashion.</h2>
         </section>
+        <!---
         <section class="intro">
             <h2 class="section">We have the best fucking 
                 <span class="text-primary">clothes</span> on earth 
@@ -87,7 +87,7 @@
                 <p></p>
             </div>
         </section>
-
+    -->
         <section class="order-online">
             <header>
                 <h2 class="section-title text-primary">ORDER ONLINE</h2>
@@ -103,59 +103,102 @@
             </div>
         </section>
 
+        <header>
+            <h2 class="section-title-products">Some of our products</h2>
+        </header>
+
+    <!--=== PRODUCTS ===-->
+
         <section class="product-showcase">
-            <header>
-                <h2 class="section-title text primary">Some of our products</h2>
-            </header>
-            <div class="products">
-                <div class="product">
+            <div class="product-card">
+                <div class="product-image">
                     <img src="img/Hoodie_black.jpeg" alt="" class="product__img">
-                    <div class="product__content">
-                    <h3 class="product__title">HOODIE</h3>
-
-                    <p>For a remarkable About page, all you need to do is figure out 
-                        your company's unique identity, and then share it with the world. 
-                        Easy, right? Of course not.
-                    </p>
-                        <p class="fineprint">Certified Organic</p>
-                    </div>
                 </div>
-                <div class="product">
-                    <div class="product__content">
-                    <h3 class="product__title">SCARF</h3>
+                    <div class="product__info">
+                    <h3 class="product__title">TRIBAL HOODIE</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">black/purple</p>
+                    </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/Hoodie_green.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">TRIBAL HOODIE</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">green/purple</p>
+                    </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/Hoodie_purple.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">TRIBAL HOODIE PURPLE</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">white print/purple</p>
+                    </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
                     <img src="img/Scarf.jpeg" alt="" class="product__img">
-                    <p>Your "About Us" page is one of the most
-                        important pages on your website, and it needs to be well crafted. 
-                        This profile also happens to be one of the most commonly overlooked pages, 
-                        which is why you should make it stand out.
-                    </p>
-                        <p class="fineprint">Certified Organic</p>
-                    </div>
                 </div>
-                <div class="product">
-                    <div class="product__content">
-                    <h3 class="product__title">MORE</h3>
-                    <img src="img/Lighter.jpeg" alt="" class="product__img">
-                    <p>The good news? It can be done. In fact, there are some 
-                        companies out there with remarkable "About Us" pages, the 
-                        elements of which you can emulate on your own website.
-                    </p>
-                        <p class="fineprint">Certified Organic</p>
+                    <div class="product__info">
+                    <h3 class="product__title">Logo Scarf</h3>
+                    <h6 class="price">25,00€</h6>
+                        <p class="fineprint">black and white</p>
                     </div>
-                </div>
             </div>
 
-            <div class="btn-group">
-                <div class="btn btn-accent">see all our products</div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/Lighter.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">Lighter bundle</h3>
+                    <h6 class="price">40,00€ - SALE</h6>
+                        <p class="fineprint">3 pieces</p>
+                    </div>
             </div>
-                <p class="mb-0">or order through one of the following</p>
-            <div class="btn-group">
-                <a href="" class="btn btn-primary">Email</a>
-                <a href="" class="btn btn-primary">Facebook</a>
-                <a href="" class="btn btn-primary">Instagram</a>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/Longsleeve_black-white_1.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">LEÇON 2 UNITÉ LONGSLEEVE</h3>
+                    <h6 class="price">35,00€ - SALE</h6>
+                        <p class="fineprint">black/white</p>
+                    </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/T-Shirt_black-red_1.jpeg" alt="" class="product__img">
+                </div>
+                    <div class="product__info">
+                    <h3 class="product__title">LEÇON 2 UNITÉ T-SHIRT</h3>
+                    <h6 class="price">25,00€ - SALE</h6>
+                        <p class="fineprint">black/red</p>
+                    </div>
             </div>
         </section>
 
+        <div class="btn-group">
+            <div class="btn btn-accent">see all our products</div>
+        </div>
+            <p class="mb-0">or order through one of the following</p>
+        <div class="btn-group">
+            <a href="" class="btn btn-primary">Email</a>
+            <a href="" class="btn btn-primary">Facebook</a>
+            <a href="" class="btn btn-primary">Instagram</a>
+        </div>
+
+    <!--=== FOOTER ===-->
         <footer>
             <ul class="footer-nav">
                 <li>
@@ -169,21 +212,19 @@
                    <a href="#">Privacy Policy</a>
                </li>
                </ul>
-
+<!---
                <ul class="footer-social">
                    <li><a href=""></a></li>
                    <li><a href=""></a></li>
                    <li><a href=""></a></li>
                    <li><a href=""></a></li>
                </ul>
+            -->
+
             </ul>
             <p class="copyright">copyright 2019 L'ECOLE FACILE</p>
         </footer>
-
-
-
     </main>
-
     <!--- SCRIPT: changes the style of the navigation bar from sticky-top to sticky-left. */ -->
     <script>
         window.addEventListener('scroll', function() {
